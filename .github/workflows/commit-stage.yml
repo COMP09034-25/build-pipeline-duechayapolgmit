@@ -51,5 +51,11 @@ jobs:
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: jar-binary
-        path: build/libs/*.jar
+        name: binaries
+        path: build/libs/*.
+
+    - name: Archive test report
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-report
+        path: build/reports/tests/test/index.html
